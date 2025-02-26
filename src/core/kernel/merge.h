@@ -114,7 +114,30 @@ DECL_MAKEDIFF(float, avx2)
 DECL_MERGEDIFF(byte, avx2)
 DECL_MERGEDIFF(word, avx2)
 DECL_MERGEDIFF(float, avx2)
-#endif /* VS_TARGET_CPU_X86 */
+
+#elif defined(VS_TARGET_CPU_ARM)
+
+DECL_MERGE(byte, neon);
+DECL_MERGE(word, neon);
+DECL_MERGE(float, neon);
+
+DECL_MASK_MERGE(byte, neon)
+DECL_MASK_MERGE(word, neon)
+DECL_MASK_MERGE(float, neon)
+
+DECL_MASK_MERGE_PREMUL(byte, neon)
+DECL_MASK_MERGE_PREMUL(word, neon)
+DECL_MASK_MERGE_PREMUL(float, neon)
+
+DECL_MAKEDIFF(byte, neon)
+DECL_MAKEDIFF(word, neon)
+DECL_MAKEDIFF(float, neon)
+
+DECL_MERGEDIFF(byte, neon)
+DECL_MERGEDIFF(word, neon)
+DECL_MERGEDIFF(float, neon)
+
+#endif /*VS_TARGET_CPU_X86*/
 
 #undef DECL_MERGEDIFF
 #undef DECL_MAKEDIFF
