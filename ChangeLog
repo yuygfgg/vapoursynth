@@ -1,9 +1,15 @@
+r74:
+removed remaining leftovers of 32 bit windows support from the source code
+windows binaries now require windows 10
+dropped python 3.8 support on windows
+now requires visual studio 2026, python 3.14 and inno setup 6.6+ on windows to build
+
 r73:
-release builds are now compiled with clang on windows which gives a speedup
+many minor python improvements (ichunjo)
 the api r3 headers are no longer distributed with the windows binaries, general api r3 support for plugins remains for now
 vsscript r3 api support has been completely removed since nobody has used it for 3+ years
-fixed mirroring fixes at edges in convolution filters to be more consistent
-fixed cache state not being updated properly for nodes with no consumers
+fixed mirroring at edges in convolution filters to be more consistent
+fixed cache state not being updated properly for nodes with no consumers ever and no calls to setcache
 
 r72:
 added named pipe output support to vspipe in windows by specifying \\.\pipe\<pipename>
